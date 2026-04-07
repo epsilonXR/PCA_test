@@ -1,24 +1,3 @@
-data_path: \\cabinet\derivatives\cheXpert
-img_path: \\cabinet\data\Public_dataset\cheXpert\CXR8\images
-
-
-## data_structure
-
-```
-data_dict
-├── train_val
-│   ├── feature_vectors   # 特征向量
-│   ├── path_list         # 图像路径/文件名
-│   └── remarks           # 备注信息
-└── test
-    ├── feature_vectors   # 特征向量
-    ├── path_list         # 图像路径/文件名
-    └── remarks           # 备注信息
-```
-
-
-
-```
 {
   "type": "dict",
   "num_keys": 2,
@@ -161,5 +140,3 @@ data_dict
     }
   }
 }
-
-```
