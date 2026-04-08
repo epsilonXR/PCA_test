@@ -1,8 +1,9 @@
-data_path: \\cabinet\derivatives\cheXpert
+data_path: \\cabinet\derivatives\cheXpert\FVs_medsiglip
 img_path: \\cabinet\data\Public_dataset\cheXpert\CXR8\images
 
+dataset:CXR14
 
-## data_structure
+## data_structure of FVs_medsiglip(Chest X-ray)
 
 ```
 data_dict
