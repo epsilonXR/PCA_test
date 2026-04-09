@@ -1,164 +1,124 @@
-data_path: \\cabinet\derivatives\cheXpert\FVs_medsiglip
-img_path: \\cabinet\data\Public_dataset\cheXpert\CXR8\images
+data_path: \\cabinet\derivatives\DeepDR\FVs_medsiglip
+img_path: \\cabinet\data\Public_dataset\DeepDR
 
-dataset:CXR14
+dataset:DeepDRiD
 
-## data_structure of FVs_medsiglip(Chest X-ray)
+## data_structure
 
-```
+```text
 data_dict
-├── train_val
-│   ├── feature_vectors   # 特征向量
-│   ├── path_list         # 图像路径/文件名
-│   └── remarks           # 备注信息
-└── test
-    ├── feature_vectors   # 特征向量
-    ├── path_list         # 图像路径/文件名
-    └── remarks           # 备注信息
+├── 1_l1
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 1_l2
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 1_r1
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 1_r2
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 2_l1
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 2_l2
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 2_r1
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── 2_r2
+│   └── numpy.ndarray
+│       ├── shape: (1152,)
+│       └── dtype: float32
+├── ...
+└── 330_r2
+    └── numpy.ndarray
+        ├── shape: (1152,)
+        └── dtype: float32
+
 ```
 
-
-
 ```
-{
+{ 
   "type": "dict",
-  "num_keys": 2,
+  "num_keys": 1200,
   "keys": [
-    "train_val",
-    "test"
-  ],
-  "items": {
-    "train_val": {
-      "type": "dict",
-      "num_keys": 3,
-      "keys": [
-        "feature_vectors",
-        "path_list",
-        "remarks"
-      ],
-      "items": {
-        "feature_vectors": {
-          "type": "numpy.ndarray",
-          "shape": [
-            86524,
-            1152
-          ],
-          "dtype": "float32"
-        },
-        "path_list": {
-          "type": "numpy.ndarray",
-          "shape": [
-            86524
-          ],
-          "dtype": "<U16"
-        },
-        "remarks": {
-          "type": "dict",
-          "num_keys": 4,
-          "keys": [
-            "findings",
-            "follow_ups",
-            "genders",
-            "ages"
-          ],
-          "items": {
-            "findings": {
-              "type": "numpy.ndarray",
-              "shape": [
-                86524
-              ],
-              "dtype": "<U100"
-            },
-            "follow_ups": {
-              "type": "numpy.ndarray",
-              "shape": [
-                86524
-              ],
-              "dtype": "int64"
-            },
-            "genders": {
-              "type": "numpy.ndarray",
-              "shape": [
-                86524
-              ],
-              "dtype": "<U1"
-            },
-            "ages": {
-              "type": "numpy.ndarray",
-              "shape": [
-                86524
-              ],
-              "dtype": "int64"
-            }
-          }
-        }
-      }
+    "1_l1", 
+    "1_l2", 
+    "1_r1", 
+    "1_r2", 
+    "2_l1", 
+    "2_l2", 
+    "2_r1", 
+    "2_r2", 
+    ..., 
+    "330_l1",
+    "330_l2",
+    "330_r1",
+    "330_r2"
+    ], 
+  "items": { 
+    "1_l1": { 
+      "type": "numpy.ndarray", 
+      "shape": [ 1152 ], 
+      "dtype": "float32" 
+    }, 
+    "1_l2": { 
+      "type": "numpy.ndarray", 
+      "shape": [ 1152 ], 
+      "dtype": "float32" 
     },
-    "test": {
-      "type": "dict",
-      "num_keys": 3,
-      "keys": [
-        "feature_vectors",
-        "path_list",
-        "remarks"
+    "1_r1": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
       ],
-      "items": {
-        "feature_vectors": {
-          "type": "numpy.ndarray",
-          "shape": [
-            25596,
-            1152
-          ],
-          "dtype": "float32"
-        },
-        "path_list": {
-          "type": "numpy.ndarray",
-          "shape": [
-            25596
-          ],
-          "dtype": "<U16"
-        },
-        "remarks": {
-          "type": "dict",
-          "num_keys": 4,
-          "keys": [
-            "findings",
-            "follow_ups",
-            "genders",
-            "ages"
-          ],
-          "items": {
-            "findings": {
-              "type": "numpy.ndarray",
-              "shape": [
-                25596
-              ],
-              "dtype": "<U86"
-            },
-            "follow_ups": {
-              "type": "numpy.ndarray",
-              "shape": [
-                25596
-              ],
-              "dtype": "int64"
-            },
-            "genders": {
-              "type": "numpy.ndarray",
-              "shape": [
-                25596
-              ],
-              "dtype": "<U1"
-            },
-            "ages": {
-              "type": "numpy.ndarray",
-              "shape": [
-                25596
-              ],
-              "dtype": "int64"
-            }
-          }
-        }
-      }
+      "dtype": "float32"
+    },
+    "1_r2": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32"
+    },
+    ...,
+    "330_l1": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32"
+    },
+    "330_l2": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32"
+    },
+    "330_r1": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32"
+    },
+    "330_r2": {
+      "type": "numpy.ndarray",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32"
     }
   }
 }
