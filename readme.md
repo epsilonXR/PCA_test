@@ -1,7 +1,12 @@
+### Base info
+
+dataset:DeepDRiD
 data_path: \\cabinet\derivatives\DeepDR\FVs_medsiglip
 img_path: \\cabinet\data\Public_dataset\DeepDR
 
-dataset:DeepDRiD
+data_after_clean:./DR_dict_clean(56,77,164,167).pt
+4 items has been removed cuz they had diffrent format
+
 
 ## data_structure
 
